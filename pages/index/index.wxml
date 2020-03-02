@@ -1,0 +1,95 @@
+
+<navigator url="/pages/shop/select">
+  <view class="shops-container">
+    <view class="l">
+      <image src="/images/order-details/icon-address.png"></image>
+      <text>杭州城西</text>
+    </view>
+    <view class="r">
+      <text>切换门店</text>
+      <image src="/images/icon/next.png"></image>
+    </view>
+  </view>
+</navigator>
+
+<view class="swiper-container">
+  <swiper indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <image mode="aspectFill" bindtap="tapBanner" src="{{item.picUrl}}" />
+    </swiper-item>
+  </swiper>
+  <view class="search">
+    <input type="text" placeholder="输入搜索关键词" value=""></input>
+    <image src="/images/icon/search.svg"></image>
+  </view>
+</view>
+
+<view class="notice-box">
+  <view class="notice">
+    <image class="notice_icon" src="/images/notice.png"></image>
+    <swiper class="notice_swiper" vertical autopay>
+      <navigator>
+        <swiper-item>
+          <view class="notice_itemr">标题标题标题</view>
+        </swiper-item>
+      </navigator>
+    </swiper>
+  </view>
+  <view class="more">更多 ></view>
+</view>
+
+<view class="category-box">
+  <view class="category-list" wx:for="{{categories}}" wx:key="id">
+    <view class="category-column">
+      <image mode="aspectFill" class="category-imgbox" src="{{item.icon}}"></image>
+      <view class="category-title">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+<view>
+  <view class="weui-loadmore weui-loadmore_line ">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">爆品推荐</view>
+  </view>
+  <view class="goods-container">
+    <view class="good-box" wx:for="{{goodsRecommend}}" wx:key="*this">
+      <view class="img-box">
+        <image mode="aspectFill" lazy-load="true" class="image" src="{{item.pic}}"/>
+      </view>
+      <view class="goods-title">{{item.name}}</view>
+      <view style="display:flex;">
+        <view class="goods-price">¥ {{item.minPrice}}</view>
+        <view class="goods-price goods-price2" >¥ {{item.originalPrice}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<image mode="widthFix" class="ad-img" src="https://dcdn.it120.cc/2020/02/19/01ab4952-2f3a-42a7-9d9b-762efe6313ca.png"></image>
+
+<view class="weui-panel weui-panel_access" style="margin-top:0px">
+  <view class="weui-panel__hd">
+    疯狂砍价
+  </view>
+  <view class="weui-panel__bd">
+    <block>
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="https://cdn.it120.cc/apifactory/2019/07/11/3bfecdf0-16c5-4710-a8e7-dd6880543ece.gif" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">男童防晒衣夏装薄外套2019年新款童装儿童中大童透气帅洋气休闲潮</view>
+          <view class="weui-media-box__desc">尼多熊袜子，适合秋冬</view>
+          <view class="weui-media-box__info" style="color:#333;line-height:2em;">
+            <view class="weui-media-box__info__meta">原价:180</view>
+            <view class="weui-media-box__info__meta" style="color:#e64340">底价:80</view>
+            <view class="weui-media-box__info__meta" style='float:right;'>
+                <button class="weui-btn mini-btn" type="warn" size="mini">砍价</button>
+              </view>
+          </view>
+        </view>
+      </view>
+      <view class="progress">
+        <progress percent="0" border-radius="8" show-info="{{false}}" font-size="20rpx" stroke-width="6" activeColor="#e64340"></progress>
+      </view>
+    </block>
+  </view>
+</view>

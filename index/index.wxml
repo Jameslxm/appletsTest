@@ -1,1 +1,5 @@
-<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+<!-- <canvas type="2d" id="myCanvas"></canvas> -->
+<!-- <canvas type="webgl" id="myCanvas2"></canvas> -->
+<canvas style="width:300px; height:200px;" canvas-id="firstCanvas" bindtouchstart="touchstart"></canvas>
+<canvas style="width:400px; height: 500px;" canvas-id="secondCanvas"></canvas>
+<canvas style="width: 400px; height: 500px;" canvas-id="secondCanvas" binderror="canvasIdErrorCallback" ></canvas>
